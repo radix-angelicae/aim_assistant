@@ -1,0 +1,16 @@
+{
+  "key.aim_assistant.aim_button": "Aim Assist",
+  "key.aim_assistant.persistent_render": "Persistent Render",
+  "key.aim_assistant.open_config": "Open Config",
+  "key.aim_assistant.toggle_filter": "Toggle Filter",
+  "key.aim_assistant.category": "Aim Assistant",
+  "message.aim_assistant.render_on": "Entity rendering ON",
+  "message.aim_assistant.render_off": "Entity rendering OFF",
+  "message.aim_assistant.filter.all": "Filter: All (except players)",
+  "message.aim_assistant.filter.hostile": "Filter: Hostile",
+  "message.aim_assistant.filter.animal": "Filter: Animals",
+  "message.aim_assistant.filter.search": "Filter: Search List",
+  "key.aim_assistant.toggle_target_switch": "Toggle Target Switch",
+  "message.aim_assistant.target_switch_on": "Target switching ON",
+  "message.aim_assistant.target_switch_off": "Target switching OFF (Single Target Lock)"
+}

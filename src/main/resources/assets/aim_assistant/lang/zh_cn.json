@@ -1,0 +1,16 @@
+{
+  "key.aim_assistant.aim_button": "辅助瞄准",
+  "key.aim_assistant.persistent_render": "持续渲染开关",
+  "key.aim_assistant.open_config": "打开配置界面",
+  "key.aim_assistant.toggle_filter": "切换过滤器",
+  "key.aim_assistant.category": "瞄准助手",
+  "message.aim_assistant.render_on": "§a实体渲染已开启",
+  "message.aim_assistant.render_off": "§c实体渲染已关闭",
+  "message.aim_assistant.filter.all": "§e过滤器：§f全部（玩家除外）",
+  "key.aim_assistant.toggle_target_switch": "开关目标切换",
+  "message.aim_assistant.target_switch_on": "§a目标切换：开启",
+  "message.aim_assistant.target_switch_off": "§c目标切换：关闭（单目标锁定）",
+  "message.aim_assistant.filter.hostile": "§e过滤器：§c敌对生物",
+  "message.aim_assistant.filter.animal": "§e过滤器：§a动物",
+  "message.aim_assistant.filter.search": "§e过滤器：§b检索列表"
+}
