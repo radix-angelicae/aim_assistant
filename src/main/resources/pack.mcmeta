@@ -1,0 +1,6 @@
+{
+  "pack": {
+    "description": { "text": "${mod_id} 资源文件" },
+    "pack_format": 15
+  }
+}
