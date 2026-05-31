@@ -1,0 +1,51 @@
+name: Auto Build and Release on Push
+
+on:
+  push:
+    branches:
+      - 1.20.1-forge
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+
+    steps:
+      - name: 检出代码
+        uses: actions/checkout@v4
+
+      - name: 设置 JDK 17
+        uses: actions/setup-java@v4
+        with:
+          java-version: '17'
+          distribution: 'temurin'
+
+      - name: 设置 Gradle
+        uses: gradle/actions/setup-gradle@v3
+
+      - name: 授权 gradlew
+        run: chmod +x gradlew
+
+      - name: 构建 Mod
+        run: ./gradlew build
+
+      - name: 生成自动版本号
+        id: version
+        run: |
+          echo "VERSION=1.20.1-forge-$(date +'%Y%m%d')-run${{ github.run_number }}" >> $GITHUB_OUTPUT
+
+      - name: 上传 Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: ${{ steps.version.outputs.VERSION }}
+          name: ${{ steps.version.outputs.VERSION }}
+          files: build/libs/*.jar
+          body: |
+            自动构建 1.20.1-forge
+            - **提交**: ${{ github.sha }}
+            - **提交信息**: ${{ github.event.head_commit.message }}
+          draft: false
+          prerelease: true
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
